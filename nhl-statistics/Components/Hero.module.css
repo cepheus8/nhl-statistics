@@ -1,0 +1,23 @@
+.hero {
+  background-color: #f8f9fa;
+  width: 100vw;
+  height: 85vh;
+}
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroDescription {
+}
+
+.heroDescription h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.heroDescription p {
+  font-size: 1.5rem;
+}
