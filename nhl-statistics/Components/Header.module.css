@@ -1,5 +1,5 @@
 .header {
-  background-color: #212529;
+  background-color: black;
   width: 100vw;
   height: 15vh;
 }
@@ -7,4 +7,6 @@
 .pageTitle {
   font-size: 3.5rem;
   font-weight: 800;
+  color: #fff;
+  font-style: italic;
 }

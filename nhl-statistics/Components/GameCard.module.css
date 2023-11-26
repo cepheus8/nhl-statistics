@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  width: 30vw;
+  height: 7rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: solid 0.1rem #ced4da;
+  position: relative;
+}
+
+.card div {
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:last-child {
+  border: none;
+}
+
+.card span {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0.7rem;
+}
