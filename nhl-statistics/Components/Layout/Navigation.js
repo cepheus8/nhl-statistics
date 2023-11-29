@@ -14,6 +14,11 @@ const Navigation = () => {
           Teams
         </Link>
       </li>
+      <li>
+        <Link href="./" className={classes.navLink}>
+          Standings
+        </Link>
+      </li>
     </ul>
   );
 };
