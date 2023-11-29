@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { data, fetchGames } from "../lib/fetching";
+import { data, fetchGames } from "../../lib/fetching";
 import GameCard from "./GameCard";
 import classes from "./Schedule.module.css";
 

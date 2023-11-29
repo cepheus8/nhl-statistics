@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Hero from "../../Components/Hero";
+import Hero from "../../Components/HomePage/Hero";
 import Head from "next/head";
 
 const HomePage = () => {
