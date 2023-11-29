@@ -15,7 +15,7 @@ const Navigation = () => {
         </Link>
       </li>
       <li>
-        <Link href="./" className={classes.navLink}>
+        <Link href="./standings" className={classes.navLink}>
           Standings
         </Link>
       </li>
