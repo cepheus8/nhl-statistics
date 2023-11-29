@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getSchedule } from "../../lib/utility";
 import GameCard from "./GameCard";
 import classes from "./Schedule.module.css";
 
@@ -8,13 +9,10 @@ const Schedule = () => {
   const formatedDate = date[0];
 
   useEffect(() => {
-    fetch(`https://api-web.nhle.com/v1/schedule/${formatedDate}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const todayGamesData = data.gameWeek[0].games;
-        console.log(todayGamesData);
-        setGamesData(todayGamesData);
-      });
+    (async () => {
+      const data = await getSchedule(formatedDate);
+      setGamesData(data);
+    })();
   }, []);
 
   if (gamesData.length === 0) {
