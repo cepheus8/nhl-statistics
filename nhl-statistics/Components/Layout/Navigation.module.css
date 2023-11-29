@@ -1,0 +1,24 @@
+.navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  display: inline-block;
+  font-size: 1.7rem;
+  padding: 1rem;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #adb5bd;
+}
+
+.navLink:active {
+  color: #36454f;
+}
