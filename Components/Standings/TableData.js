@@ -1,16 +1,21 @@
-const TableData = () => {
+import Image from "next/image";
+
+const TableData = (props) => {
   return (
     <tr>
-      <td>1</td>
-      <td>Team Logo</td>
-      <td>20</td>
-      <td>18</td>
-      <td>2</td>
-      <td>0</td>
-      <td>36</td>
-      <td>57</td>
-      <td>40</td>
-      <td>17</td>
+      <td>{props.rank}</td>
+      <td>
+        <Image src={props.logo} height={50} width={50} />
+        {props.teamName}
+      </td>
+      <td>{props.games}</td>
+      <td>{props.wins}</td>
+      <td>{props.losses}</td>
+      <td>{props.otLosses}</td>
+      <td>{props.points}</td>
+      <td>{props.goalFor}</td>
+      <td>{props.goalAgainst}</td>
+      <td>{props.goalDifferential}</td>
     </tr>
   );
 };

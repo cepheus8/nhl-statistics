@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
 import classes from "./Standings.module.css";
 import Table from "./Table";
+import { getStandings } from "../../lib/utility";
 
 const Standings = () => {
+  const [standingsData, setStandingsData] = useState([]);
+
   useEffect(() => {
-    fetch(`https://api-web.nhle.com/v1/standings/now`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    (async () => {
+      const data = await getStandings();
+      setStandingsData(data);
+    })();
   }, []);
+
+  if (standingsData.length === 0) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <section className={classes.standingsSection}>
-      <Table />
+      <Table standingsData={standingsData} />
     </section>
   );
 };

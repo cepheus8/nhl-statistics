@@ -1,6 +1,6 @@
 import TableData from "./TableData";
 
-const Table = () => {
+const Table = (props) => {
   return (
     <table>
       <thead>
@@ -18,7 +18,23 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <TableData />
+        {props.standingsData.map((data, i) => {
+          return (
+            <TableData
+              rank={i}
+              logo={data.teamLogo}
+              teamName={data.teamName.default}
+              games={data.gamesPlayed}
+              wins={data.wins}
+              losses={data.losses}
+              otLosses={data.otLosses}
+              points={data.points}
+              goalFor={data.goalFor}
+              goalAgainst={data.goalAgainst}
+              goalDifferential={data.goalDifferential}
+            />
+          );
+        })}
       </tbody>
     </table>
   );
