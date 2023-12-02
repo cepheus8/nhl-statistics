@@ -1,10 +1,11 @@
 import Image from "next/image";
+import classes from "./TableData.module.css";
 
 const TableData = (props) => {
   return (
-    <tr>
-      <td>{props.rank}</td>
-      <td>
+    <tr className={classes.row}>
+      <td>{props.rank + 1}</td>
+      <td className={classes.nameData}>
         <Image src={props.logo} height={50} width={50} />
         {props.teamName}
       </td>

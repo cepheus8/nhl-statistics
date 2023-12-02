@@ -1,20 +1,21 @@
 import TableData from "./TableData";
+import classes from "./Table.module.css";
 
 const Table = (props) => {
   return (
-    <table>
-      <thead>
+    <table className={classes.table}>
+      <thead className={classes.head}>
         <tr>
           <th>Rank</th>
           <th>Team</th>
-          <th>GamesPlayed</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>OTLosses</th>
-          <th>Points</th>
-          <th>GoalsFor</th>
-          <th>GoalsAgainst</th>
-          <th>goalDifferential</th>
+          <th>GP</th>
+          <th>W</th>
+          <th>L</th>
+          <th>OT</th>
+          <th>PTS</th>
+          <th>GF</th>
+          <th>GA</th>
+          <th>DIFF</th>
         </tr>
       </thead>
       <tbody>

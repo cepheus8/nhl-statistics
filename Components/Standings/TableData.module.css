@@ -1,0 +1,14 @@
+.row {
+  border-bottom: 0.1rem solid #ced4da;
+}
+
+.row td {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.nameData {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
