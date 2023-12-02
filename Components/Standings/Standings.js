@@ -19,6 +19,12 @@ const Standings = () => {
 
   return (
     <section className={classes.standingsSection}>
+      <div className={classes.optionBar}>
+        <p>League</p>
+        <p>Conference</p>
+        <p>Division</p>
+      </div>
+      <h1 className={classes.standingsTitle}>National Hockey League</h1>
       <Table standingsData={standingsData} />
     </section>
   );

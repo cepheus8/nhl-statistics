@@ -18,3 +18,7 @@
 .head th:nth-child(2) {
   width: 15%;
 }
+
+.body tr:nth-child(odd) {
+  background-color: #4a5760;
+}

@@ -18,7 +18,7 @@ const Table = (props) => {
           <th>DIFF</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className={classes.body}>
         {props.standingsData.map((data, i) => {
           return (
             <TableData
