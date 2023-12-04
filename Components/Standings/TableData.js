@@ -6,7 +6,7 @@ const TableData = (props) => {
     <tr className={classes.row}>
       <td>{props.rank + 1}</td>
       <td className={classes.nameData}>
-        <Image src={props.logo} height={50} width={50} />
+        <Image src={props.logo} height={50} width={50} alt={props.teamName} />
         {props.teamName}
       </td>
       <td>{props.games}</td>

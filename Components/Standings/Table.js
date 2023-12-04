@@ -23,6 +23,7 @@ const Table = (props) => {
         {props.standingsData.map((data, i) => {
           return (
             <TableData
+              key={data.teamAbbrev.default}
               rank={i}
               logo={data.teamLogo}
               teamName={data.teamName.default}

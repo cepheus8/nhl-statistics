@@ -8,7 +8,11 @@ const Standings = (props) => {
   const path = router.pathname.split("/")[2];
 
   if (props.standingsData.length === 0) {
-    return <p>Loading...</p>;
+    return (
+      <section className={classes.standingsSection}>
+        <p>Loading...</p>
+      </section>
+    );
   }
 
   return (
@@ -29,12 +33,44 @@ const Standings = (props) => {
       {path === "conference" && (
         <div>
           <div>
-            <h1 className={classes.standingsTitle}>Eastern</h1>
+            <h1 className={classes.standingsTitle}>
+              {props.standingsData.eastConference[0].conferenceName}
+            </h1>
             <Table standingsData={props.standingsData.eastConference} />
           </div>
           <div>
-            <h1 className={classes.standingsTitle}>Western</h1>
+            <h1 className={classes.standingsTitle}>
+              {props.standingsData.westConference[0].conferenceName}
+            </h1>
             <Table standingsData={props.standingsData.westConference} />
+          </div>
+        </div>
+      )}
+      {path === "division" && (
+        <div>
+          <div>
+            <h1 className={classes.standingsTitle}>
+              {props.standingsData.atlantic[0].divisionName}
+            </h1>
+            <Table standingsData={props.standingsData.atlantic} />
+          </div>
+          <div>
+            <h1 className={classes.standingsTitle}>
+              {props.standingsData.metropolitan[0].divisionName}
+            </h1>
+            <Table standingsData={props.standingsData.metropolitan} />
+          </div>
+          <div>
+            <h1 className={classes.standingsTitle}>
+              {props.standingsData.central[0].divisionName}
+            </h1>
+            <Table standingsData={props.standingsData.central} />
+          </div>
+          <div>
+            <h1 className={classes.standingsTitle}>
+              {props.standingsData.pacific[0].divisionName}
+            </h1>
+            <Table standingsData={props.standingsData.pacific} />
           </div>
         </div>
       )}
