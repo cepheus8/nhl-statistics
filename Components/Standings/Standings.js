@@ -1,31 +1,43 @@
-import { useEffect, useState } from "react";
 import classes from "./Standings.module.css";
 import Table from "./Table";
-import { getStandings } from "../../lib/utility";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Standings = () => {
-  const [standingsData, setStandingsData] = useState([]);
+const Standings = (props) => {
+  const router = useRouter();
+  const path = router.pathname.split("/")[2];
 
-  useEffect(() => {
-    (async () => {
-      const data = await getStandings();
-      setStandingsData(data);
-    })();
-  }, []);
-
-  if (standingsData.length === 0) {
+  if (props.standingsData.length === 0) {
     return <p>Loading...</p>;
   }
 
   return (
     <section className={classes.standingsSection}>
       <div className={classes.optionBar}>
-        <p>League</p>
-        <p>Conference</p>
-        <p>Division</p>
+        <Link className={classes.activeLink} href="./league">
+          League
+        </Link>
+        <Link href="./conference">Conference</Link>
+        <Link href="./division">Division</Link>
       </div>
-      <h1 className={classes.standingsTitle}>National Hockey League</h1>
-      <Table standingsData={standingsData} />
+      {path === "league" && (
+        <div>
+          <h1 className={classes.standingsTitle}>National Hockey League</h1>
+          <Table standingsData={props.standingsData} />
+        </div>
+      )}
+      {path === "conference" && (
+        <div>
+          <div>
+            <h1 className={classes.standingsTitle}>Eastern</h1>
+            <Table standingsData={props.standingsData.eastConference} />
+          </div>
+          <div>
+            <h1 className={classes.standingsTitle}>Western</h1>
+            <Table standingsData={props.standingsData.westConference} />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

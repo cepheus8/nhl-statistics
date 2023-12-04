@@ -2,6 +2,7 @@ import TableData from "./TableData";
 import classes from "./Table.module.css";
 
 const Table = (props) => {
+  console.log(props.standingsData);
   return (
     <table className={classes.table}>
       <thead className={classes.head}>

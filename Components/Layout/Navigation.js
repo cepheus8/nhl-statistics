@@ -15,7 +15,7 @@ const Navigation = () => {
         </Link>
       </li>
       <li>
-        <Link href="./standings" className={classes.navLink}>
+        <Link href="./standings/league" className={classes.navLink}>
           Standings
         </Link>
       </li>

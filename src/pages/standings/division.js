@@ -1,7 +1,7 @@
 import Standings from "../../../Components/Standings/Standings";
 
-const standingsPage = () => {
+const DivisionStandingsPage = () => {
   return <Standings />;
 };
 
-export default standingsPage;
+export default DivisionStandingsPage;
