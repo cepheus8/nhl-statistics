@@ -10,7 +10,7 @@ const Navigation = () => {
         </Link>
       </li>
       <li>
-        <Link href="./" className={classes.navLink}>
+        <Link href="./teams" className={classes.navLink}>
           Teams
         </Link>
       </li>

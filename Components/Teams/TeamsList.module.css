@@ -1,0 +1,14 @@
+.teamsSection {
+  background-color: #36454f;
+  width: 100vw;
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin: 3rem auto;
+  gap: 1rem;
+}
