@@ -1,0 +1,6 @@
+.tableRoster {
+  table-layout: fixed;
+  width: 85%;
+  overflow: scroll;
+  border-collapse: collapse;
+}

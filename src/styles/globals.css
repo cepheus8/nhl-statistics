@@ -10,3 +10,38 @@ body {
   overflow-x: hidden;
   font-family: "Rubik", sans-serif;
 }
+
+:root {
+  --NJD: #ce1126;
+  --NYI: #00539b;
+  --NYR: #0038a8;
+  --PHI: #f74902;
+  --PIT: #000000;
+  --BOS: #ffb81c;
+  --BUF: #003087;
+  --MTL: #af1e2d;
+  --OTT: #000000;
+  --TOR: #ffffff;
+  --CAR: #ce1126;
+  --FLA: #041e42;
+  --TBL: #002868;
+  --WSH: #041e42;
+  --CHI: #cf0a2c;
+  --DET: #ce1126;
+  --NSH: #ffb81c;
+  --STL: #002f87;
+  --CGY: #d2001c;
+  --COL: #6f263d;
+  --EDM: #041e42;
+  --VAN: #00205b;
+  --ANA: #f47a38;
+  --DAL: #006847;
+  --LAK: #111111;
+  --SJS: #006d75;
+  --CBJ: #002654;
+  --MIN: #a6192e;
+  --WPG: #041e42;
+  --ARI: #8c2633;
+  --VGK: #b4975a;
+  --SEA: #001628;
+}

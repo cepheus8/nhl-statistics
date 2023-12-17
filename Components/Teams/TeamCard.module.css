@@ -17,14 +17,21 @@
   background-color: #fff;
 }
 
-.cardName {
-  font-size: 12px;
+.cardTitle {
+  font-size: 1rem;
 }
 
-.linkContainer {
+.nameContainer {
   display: flex;
   width: 16rem;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  text-decoration: none;
+}
+
+.cardLink:link,
+.cardLink:visited {
+  text-decoration: none;
+  color: inherit;
 }

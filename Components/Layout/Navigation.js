@@ -5,17 +5,17 @@ const Navigation = () => {
   return (
     <ul className={classes.navList}>
       <li>
-        <Link href="./" className={classes.navLink}>
+        <Link href="/" className={classes.navLink}>
           Players
         </Link>
       </li>
       <li>
-        <Link href="./teams" className={classes.navLink}>
+        <Link href="/teams" className={classes.navLink}>
           Teams
         </Link>
       </li>
       <li>
-        <Link href="./standings/league" className={classes.navLink}>
+        <Link href="/standings/league" className={classes.navLink}>
           Standings
         </Link>
       </li>

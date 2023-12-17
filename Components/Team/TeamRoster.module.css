@@ -1,0 +1,17 @@
+.teamSection {
+  width: 100vw;
+  height: 85vh;
+  overflow-y: scroll;
+  z-index: 2;
+  position: relative;
+  padding: 0 0.3rem;
+}
+
+.backgroundImage {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 50%;
+}

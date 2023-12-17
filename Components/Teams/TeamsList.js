@@ -7,7 +7,12 @@ const TeamsList = (props) => {
       <div className={classes.cardContainer}>
         {props.teamsData.map((team) => {
           return (
-            <TeamCard logo={team.logo} key={team.id} name={team.name.default} />
+            <TeamCard
+              logo={team.logo}
+              key={team.id}
+              name={team.name.default}
+              query={team.abbrev}
+            />
           );
         })}
       </div>

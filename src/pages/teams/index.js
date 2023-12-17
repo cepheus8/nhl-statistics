@@ -6,7 +6,6 @@ const TeamsHomePage = () => {
   const [teamsData, setTeamsData] = useState([]);
 
   useEffect(() => {
-    let logosArray = [];
     (async () => {
       const teamsLogosArray = await getTeamsData();
       setTeamsData(teamsLogosArray);
