@@ -4,8 +4,9 @@ import classes from "./TeamRoster.module.css";
 import Image from "next/image";
 import { getTeamsData } from "../../lib/utility";
 
-const TeamRoster = ({ abbrev }) => {
+const TeamRoster = ({ rosterData, abbrev }) => {
   const [logo, setLogo] = useState("");
+  console.log(rosterData);
 
   useEffect(() => {
     if (!abbrev) return;
@@ -18,6 +19,14 @@ const TeamRoster = ({ abbrev }) => {
       setLogo(teamData.logo);
     })();
   }, [abbrev]);
+
+  if (!rosterData) {
+    return (
+      <section className={classes.standingsSection}>
+        <p>Loading...</p>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -34,7 +43,8 @@ const TeamRoster = ({ abbrev }) => {
             className={classes.backgroundImage}
             priority
           />
-          <PlayersTable />
+          <h1>Roster</h1>
+          <PlayersTable rosterData={rosterData.forwards} />
         </div>
       )}
     </section>

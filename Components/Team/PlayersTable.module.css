@@ -4,3 +4,21 @@
   overflow: scroll;
   border-collapse: collapse;
 }
+
+.headRoster {
+  border-bottom: 0.1rem solid #ced4da;
+  border-top: 0.1rem solid #ced4da;
+}
+
+.headRoster th {
+  width: 5%;
+  padding: 1rem 0;
+}
+
+.headRoster th:first-child {
+  width: 10%;
+}
+
+.headRoster th:last-child {
+  width: 10%;
+}

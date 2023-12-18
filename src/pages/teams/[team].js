@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getRoster } from "../../../lib/utility";
 
 const teamPage = () => {
-  const [rosterData, setRosterData] = useState([]);
+  const [rosterData, setRosterData] = useState(undefined);
   const router = useRouter();
   const teamAbbrev = router.query.team;
 
@@ -17,7 +17,7 @@ const teamPage = () => {
     })();
   }, [router.isReady]);
 
-  return <TeamRoster roster={rosterData} abbrev={teamAbbrev} />;
+  return <TeamRoster rosterData={rosterData} abbrev={teamAbbrev} />;
 };
 
 export default teamPage;
