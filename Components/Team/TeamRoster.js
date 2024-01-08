@@ -43,8 +43,19 @@ const TeamRoster = ({ rosterData, abbrev }) => {
             className={classes.backgroundImage}
             priority
           />
-          <h1>Roster</h1>
-          <PlayersTable rosterData={rosterData.forwards} />
+          <h1 className={classes.rosterTitle}>Roster</h1>
+          <div className={classes.rosterContainer}>
+            <h2>Forwards</h2>
+            <PlayersTable rosterData={rosterData.forwards} />
+          </div>
+          <div className={classes.rosterContainer}>
+            <h2>Defensemen</h2>
+            <PlayersTable rosterData={rosterData.defensemen} />
+          </div>
+          <div className={classes.rosterContainer}>
+            <h2>Goalies</h2>
+            <PlayersTable rosterData={rosterData.goalies} />
+          </div>
         </div>
       )}
     </section>
