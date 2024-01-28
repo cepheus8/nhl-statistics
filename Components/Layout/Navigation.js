@@ -5,7 +5,7 @@ const Navigation = () => {
   return (
     <ul className={classes.navList}>
       <li>
-        <Link href="/" className={classes.navLink}>
+        <Link href="/players" className={classes.navLink}>
           Players
         </Link>
       </li>
